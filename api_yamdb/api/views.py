@@ -1,5 +1,9 @@
 import django_filters
-from api_yamdb.settings import ADMIN_EMAIL
+from api.serializers import (AdminUserCreateSerializer, CategorySerializer,
+                             CommentSerializer, GenreSerializer,
+                             ReviewSerializer, TitlePostSerializer,
+                             TitleSerializer, TokenObtainSerializer,
+                             UserCreateSerializer, UserSerializer)
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
@@ -13,11 +17,7 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import AccessToken
 from reviews.models import Category, Genre, Review, Title, User
 
-from api.serializers import (AdminUserCreateSerializer, CategorySerializer,
-                             CommentSerializer, GenreSerializer,
-                             ReviewSerializer, TitlePostSerializer,
-                             TitleSerializer, TokenObtainSerializer,
-                             UserCreateSerializer, UserSerializer)
+from api_yamdb.settings import ADMIN_EMAIL
 
 from .permissions import (CreateIsAdmin, IsAdmin, IsAdminOrReadOnly,
                           IsModerator, IsOwnerOrReadOnly, IsSuperUser, IsUser)
