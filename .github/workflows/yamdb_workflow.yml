@@ -44,7 +44,9 @@ jobs:
            password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: going to Dockerfile
-        run: cd api_yamdb/
+        run: |#
+          cd api_yamdb/
+          ls
 
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
