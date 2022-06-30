@@ -45,7 +45,8 @@ jobs:
 
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
-        run: ls
+        run: |#
+          ls
         with:
           push: true
           tags:  artemwhiter/api_yamdb:latest
