@@ -47,7 +47,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags:  ${{ secrets.DOCKER_USERNAME }}/${{ secrets.PPROJECT_NAME}}
+          tags:  ${{ secrets.DOCKER_USERNAME }}/${{ secrets.PPROJECT_NAME}}:latest
 
   deploy:
     runs-on: ubuntu-latest
