@@ -43,7 +43,8 @@ jobs:
            username: ${{ secrets.DOCKER_USERNAME }}
            password: ${{ secrets.DOCKER_PASSWORD }}
 
-      run: ls
+      run: |#
+        ls
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
