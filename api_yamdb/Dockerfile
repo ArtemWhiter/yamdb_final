@@ -2,7 +2,9 @@ FROM python:3.7-slim
 
 WORKDIR /app
 
-COPY ./ /app
+COPY ./api_yamdb /app
+
+RUN ls
 
 RUN python -m pip install --upgrade pip
 
