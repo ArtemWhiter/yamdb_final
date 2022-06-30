@@ -4,8 +4,6 @@ WORKDIR /app
 
 COPY ./api_yamdb /app
 
-RUN ls
-
 RUN python -m pip install --upgrade pip
 
 RUN pip install -r requirements.txt --no-cache-dir
