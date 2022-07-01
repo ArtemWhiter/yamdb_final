@@ -9,7 +9,6 @@ services:
       - ./.env
 
   web:
-    #build: ../api_yamdb/
     image: artemwhiter/api_yamdb:latest
     restart: always
     volumes:
